@@ -1,0 +1,12 @@
+Reference, Quantity, Value, Footprint, Datasheet
+J1 ,1,Conn_01x03_Male,Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm,~
+J2 ,1,Conn_01x04_Male,Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm,~
+Q4 Q6 Q1 Q2 ,4,2N3906,TO_SOT_Packages_THT:TO-92_Inline_Wide,https://www.fairchildsemi.com/datasheets/2N/2N3906.pdf
+Q5 Q7 Q8 Q3 ,4,2N3904,TO_SOT_Packages_THT:TO-92_Inline_Wide,https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf
+R1 ,1,5.6k,Resistors_ThroughHole:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal,~
+R11 R12 R5 R6 R7 R10 ,6,5.6K,Resistors_ThroughHole:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal,~
+R3 ,1,220,Resistors_ThroughHole:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal,~
+R8 R4 ,2,12k,Resistors_ThroughHole:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal,~
+R9 R2 ,2,1.8k,Resistors_ThroughHole:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal,~
+U1 ,1,ESP-01v090,ESP8266:ESP-01,http://l0l.org.uk/2014/12/esp8266-modules-hardware-guide-gotta-catch-em-all/
+-,1,MT3608 Boost Module,-,

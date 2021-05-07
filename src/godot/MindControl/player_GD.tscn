@@ -1,0 +1,103 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://player_GD.gd" type="Script" id=1]
+[ext_resource path="res://anim/light.png" type="Texture" id=2]
+[ext_resource path="res://anim/smokeYellow0.png" type="Texture" id=3]
+[ext_resource path="res://anim/smokeYellow1.png" type="Texture" id=4]
+[ext_resource path="res://anim/smokeYellow2.png" type="Texture" id=5]
+[ext_resource path="res://anim/smokeYellow3.png" type="Texture" id=6]
+[ext_resource path="res://anim/smokeYellow4.png" type="Texture" id=7]
+[ext_resource path="res://anim/smokeYellow5.png" type="Texture" id=8]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 32.157, 31.8734 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "Anim"
+length = 0.5
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.9, 0.9 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "StopAnim"
+length = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "Walking"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 1, 8 ]
+}
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "smoke",
+"speed": 5.0
+} ]
+
+[node name="player_GD" type="KinematicBody2D"]
+script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Sprite1" type="Sprite" parent="."]
+scale = Vector2( 1.75, 1.75 )
+texture = ExtResource( 2 )
+hframes = 9
+frame = 2
+
+[node name="Label" type="Label" parent="."]
+margin_left = -41.0
+margin_top = 43.0
+margin_right = 40.0
+margin_bottom = 57.0
+text = "Poor Guy"
+align = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Anim = SubResource( 2 )
+anims/StopAnim = SubResource( 3 )
+anims/Walking = SubResource( 5 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 0.902496, -81.2252 )
+scale = Vector2( 0.4, 0.4 )
+frames = SubResource( 4 )
+animation = "smoke"
