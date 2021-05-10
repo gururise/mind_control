@@ -8,3 +8,15 @@ Code and schematics for a mind control device described in this [Video](https://
 Printed Circuit Board [available](https://www.pcbway.com/project/shareproject/Mind_Control.html).
 
 <img src="https://github.com/gururise/mind_control/blob/main/img/IMG_20191009_173348.jpg" width="320">
+
+LICENSE:
+-----------
+GNU General Public License v3 (GPL-3) - [GPL v3](https://tldrlegal.com/license/gnu-general-public-license-v3-(gpl-3))
+
+Notice
+-----
+**No Warranty.** 
+No representation as to the accuracy or completeness or safety of this project or any software/hardware contained within.
+
+**Warranty Disclaimer.**
+Creator of this repository disclaims to the fullest extent authorized by law all warranties, whether express or implied, including any implied warranties of title, non-infringement, quiet enjoyment, integration, merchantability or fitness for a particular purpose.
