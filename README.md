@@ -1,5 +1,5 @@
 # mind_control
-Code and schematics for a mind control device described in this [Video](https://www.youtube.com/watch?v=qj6u--lfeGo)
+Code and schematics for a mind control device (using Galvanice Vestibular Stimulation) described in this [Video](https://www.youtube.com/watch?v=qj6u--lfeGo)
 
 <img src="https://github.com/gururise/mind_control/blob/main/img/20210506_155134.jpg" width="640">
 
