@@ -85,7 +85,8 @@ class Window(QtWidgets.QMainWindow):
         else:
             self.equalizer.setValues([xval, 0])
 
-        #self.UDPClientSocket.sendto(str.encode("Y0:X"+str(xval)), serverAddressPort)
+        # send data to GVS Device
+        self.UDPClientSocket.sendto(str.encode("Y0:X"+str(xval)), serverAddressPort)
 
         if rdata != None:
             for x in range(4, 22):
@@ -120,10 +121,10 @@ class Window(QtWidgets.QMainWindow):
             print("accX: " + str(rdata[7]))
 
             #self.calc_x_acc()
-            print(clientIP)
+            #print(clientIP)
 
             # Sending a reply to client
-            UDPServerSocket.sendto(bytesToSend, address)
+            #self.UDPServerSocket.sendto(bytesToSend, address)
 
 
 w = Window()
